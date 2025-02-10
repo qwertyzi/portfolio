@@ -309,4 +309,39 @@ template {
 
 body {
   font-family: "Inconsolata", serif;
+  background-color: #1b1a17;
+}
+
+ul, ol, li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 1215px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20.5px 0;
+}
+
+.list-anchor-links {
+  display: flex;
+  gap: 64px;
+}
+
+.anchor-link {
+  font-size: 20px;
+  color: #f0e3ca;
+  font-weight: 700;
+  text-decoration: none;
+  text-transform: capitalize;
+  transition: color 500ms;
+}
+.anchor-link:hover {
+  color: #00cc00;
 }/*# sourceMappingURL=main.css.map */

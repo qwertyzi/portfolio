@@ -1,0 +1,29 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20.5px 0;
+}
+
+.logo {
+}
+.menu {
+}
+.list-anchor-links {
+    display: flex;
+    gap: 64px;
+}
+.list-anchor-links__item {
+}
+.anchor-link {
+    font-size: 20px;
+    color: #f0e3ca;
+    font-weight: 700;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: color 500ms;
+
+    &:hover {
+        color: #00cc00;
+    }
+}
