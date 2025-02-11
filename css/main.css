@@ -319,14 +319,18 @@ ul, ol, li {
 }
 
 .container {
-  max-width: 1215px;
+  max-width: 1245px;
+  margin: 0 auto;
+  padding: 0 15px;
 }
 
-.header {
+.header__content {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 20.5px 0;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .list-anchor-links {
