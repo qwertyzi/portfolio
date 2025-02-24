@@ -383,4 +383,43 @@ h1, h2, h3, h4, h5, h6 {
   color: #F0E3CA;
   font-size: 20px;
   font-weight: 400;
+}
+
+.avatar {
+  width: 629px;
+  height: 575px;
+  background-image: url(../../img/bg-pc.png);
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.avatar__item {
+  width: 374px;
+  height: 374px;
+  border-radius: 30% 70% 70% 30%/30% 28% 72% 70%;
+  overflow: hidden;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.avatar__item img {
+  width: 100%;
+  height: 100%;
+}
+
+.avatar__item--1 {
+  z-index: 3;
+}
+
+.avatar__item--2 {
+  background-color: #00cc00;
+  z-index: 2;
+  transform: translate(-50%, -50%) rotate(50deg);
+}
+
+.avatar__item--3 {
+  background-color: #F0E3CA;
+  z-index: 1;
+  transform: translate(-50%, -50%) rotate(120deg);
 }/*# sourceMappingURL=main.css.map */
