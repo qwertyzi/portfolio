@@ -13,13 +13,20 @@
     @media (max-width: 768px) {
         flex-direction: column;
         gap: 19px;
-        
+    }
+
+    @media (max-width: 530px) {
+        flex-direction: row;
+        gap: 0;
     }
 }
 
 .logo {
 }
 .menu {
+    @media (max-width: 530px) {
+        display: none;
+    }
 }
 .list-anchor-links {
     display: flex;
@@ -27,6 +34,7 @@
 }
 .list-anchor-links__item {
 }
+
 .anchor-link {
     font-size: 20px;
     color: #f0e3ca;
@@ -37,5 +45,50 @@
 
     &:hover {
         color: #00cc00;
+    }
+}
+
+.burger {
+    width: 48px;
+    height: 48px;
+    background-color: transparent;
+    display: none;
+    border: none;
+
+    &__line {
+        width: 36px;
+        height: 4px;
+        display: block;
+        background-color: #f0e3ca;
+        position: relative;
+
+        &::before,
+        &::after {
+            content: "";
+            width: 36px;
+            height: 4px;
+            display: block;
+            background-color: #f0e3ca;
+            position: absolute;
+            left: 0;
+        }
+
+        &::before {
+            bottom: 10px;
+        }
+
+        &::after {
+            bottom: -10px;
+        }
+
+
+    }
+
+
+    @media (max-width: 530px) {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
     }
 }
