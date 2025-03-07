@@ -387,6 +387,7 @@ h1, h2, h3, h4, h5, h6 {
   border: none;
 }
 .burger__line {
+  transition: background-color 0.3s 0s;
   width: 36px;
   height: 4px;
   display: block;
@@ -401,12 +402,26 @@ h1, h2, h3, h4, h5, h6 {
   background-color: #f0e3ca;
   position: absolute;
   left: 0;
+  transition: transform 0.3s, bottom 0.3s 0.3s;
 }
 .burger__line::before {
   bottom: 10px;
 }
 .burger__line::after {
   bottom: -10px;
+}
+.burger.open .burger__line {
+  background-color: transparent;
+}
+.burger.open .burger__line::before {
+  bottom: 0;
+  transform: rotate(45deg);
+  transition: bottom 0.3s, transform 0.3s 0.3s;
+}
+.burger.open .burger__line::after {
+  bottom: 0;
+  transform: rotate(-45deg);
+  transition: bottom 0.3s, transform 0.3s 0.3s;
 }
 @media (max-width: 530px) {
   .burger {

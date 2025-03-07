@@ -56,6 +56,7 @@
     border: none;
 
     &__line {
+        transition: background-color .3s 0s;
         width: 36px;
         height: 4px;
         display: block;
@@ -71,6 +72,7 @@
             background-color: #f0e3ca;
             position: absolute;
             left: 0;
+            transition: transform .3s, bottom .3s .3s;
         }
 
         &::before {
@@ -84,6 +86,22 @@
 
     }
 
+    &.open {
+        .burger__line {
+            background-color: transparent;
+            
+            &::before{
+                bottom: 0;
+                transform: rotate(45deg);
+                transition: bottom .3s, transform .3s .3s;
+            }
+            &::after{
+                bottom: 0;
+                transform: rotate(-45deg);
+                transition: bottom .3s, transform .3s .3s;
+            }
+        }
+    }
 
     @media (max-width: 530px) {
         display: flex;
