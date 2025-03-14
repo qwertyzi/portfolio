@@ -1,40 +1,21 @@
-// const burger = document.querySelector("#hamburger");
-// const menu = document.querySelector("#menu")
-
-
-// const mobileMenu = () => {
-//     burger.classList.toggle("open");
-//     menu.classList.toggle("open")
-// }
-
-// burger.addEventListener("click", mobileMenu);
-
-
-// 1.допис стили и скипты
-// 2.превести на делиг событий
-
 const header = document.querySelector("#header");
 
 const mobileMenu = (event) => {
-    console.log(event);
-    
     const isBurger = event.target.closest("#hamburger")
+    const isAnchorLink = event.target.closest("[data-anchor]")
 
     if (isBurger) {
         isBurger.classList.toggle("open");
         const menu = header.querySelector("#menu")
         menu.classList.toggle("open")
     }
-    
+
+    if (isAnchorLink) {
+        const menu = header.querySelector("#menu")
+        menu.classList.remove("open")
+        const burger = document.querySelector("#hamburger")
+        burger.classList.remove("open")
+    }
 }
 
 header.addEventListener("click", (event) => mobileMenu(event));
-
-
-
-
-
-
-
-
-
