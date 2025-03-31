@@ -12,6 +12,10 @@
         gap: 64px;
         padding: 128px 0px;
     }
+
+    @media (max-width: 768px) {
+        padding: 140px 0px;
+    }
 }
 
 .hero {
@@ -23,6 +27,10 @@
     color: #00cc00;
     font-size: 64px;
     font-weight: 900;
+
+    @media (max-width: 768px) {
+        font-size: 40px;  
+    }
 }
 
 .hero__subtitle {
@@ -30,12 +38,20 @@
     color: #F0E3CA;
     font-size: 40px;
     font-weight: 700;
+
+    @media (max-width: 768px) {
+        font-size: 32px;  
+    }
 }
 
 .hero__description {
     color: #F0E3CA;
     font-size: 20px;
     font-weight: 400;
+
+    @media (max-width: 768px) {
+        font-size: 24px;  
+    }
 }
 
 .avatar {
@@ -44,6 +60,17 @@
     background-image: url(../../img/bg-pc.png);
     background-repeat: no-repeat;
     position: relative;
+
+    @media (max-width: 768px) {
+        width: 413px;
+        height: 430px;
+        background-size: cover;
+    }
+
+    @media (max-width: 450px) {
+        width: 345px;
+        height: 290px;
+    }
 }
 .avatar__item {
     width: 374px;
@@ -54,6 +81,16 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+
+    @media (max-width: 768px) {
+        width: 277px;
+        height: 277px;
+    }
+
+    @media (max-width: 450px) {
+        width: 220px;
+        height: 220px;
+    }
 
 
     img {
