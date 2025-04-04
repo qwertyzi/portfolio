@@ -597,4 +597,50 @@ h1, h2, h3, h4, h5, h6 {
   to {
     transform: translate(-50%, -50%) rotate(360deg);
   }
+}
+.about-me__content {
+  display: flex;
+  gap: 32px;
+  max-width: 1036px;
+  margin: 0 auto;
+  padding: 64px 0;
+}
+
+.context-icon {
+  width: 100px;
+  height: 100px;
+  position: relative;
+  flex-shrink: 0;
+}
+
+.context-icon__item {
+  width: 72px;
+  height: 72px;
+  border-radius: 30% 70% 70% 30%/30% 28% 72% 70%;
+  overflow: hidden;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  backdrop-filter: blur(8px);
+  filter: blur(5px);
+}
+
+.context-icon__item--first {
+  background-color: #00cc00;
+  z-index: 2;
+  transform: translate(-50%, -50%) rotate(50deg);
+  animation: rotate 5s ease-in-out infinite;
+}
+
+.context-icon__item--second {
+  background-color: #F0E3CA;
+  z-index: 1;
+  transform: translate(-50%, -50%) rotate(120deg);
+  animation: rotate 7s ease-in-out infinite;
+}
+
+.about-me__text {
+  font-size: 24px;
+  color: #F0E3CA;
 }/*# sourceMappingURL=main.css.map */
