@@ -576,10 +576,25 @@ h1, h2, h3, h4, h5, h6 {
   background-color: #00cc00;
   z-index: 2;
   transform: translate(-50%, -50%) rotate(50deg);
+  animation: rotate 5s ease-in-out infinite;
+  backdrop-filter: blur(8px);
+  filter: blur(20px);
 }
 
 .avatar__item--3 {
   background-color: #F0E3CA;
   z-index: 1;
   transform: translate(-50%, -50%) rotate(120deg);
+  animation: rotate 7s ease-in-out infinite;
+  backdrop-filter: blur(8px);
+  filter: blur(20px);
+}
+
+@keyframes rotate {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
 }/*# sourceMappingURL=main.css.map */
