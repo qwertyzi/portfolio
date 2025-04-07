@@ -335,6 +335,11 @@ h1, h2, h3, h4, h5, h6 {
   padding: 0 15px;
 }
 
+.context-title {
+  font-size: 32px;
+  color: #00CC00;
+}
+
 .header {
   position: fixed;
   top: 0;
@@ -650,4 +655,12 @@ h1, h2, h3, h4, h5, h6 {
 .about-me__text {
   font-size: 24px;
   color: #F0E3CA;
+}
+
+.skills .context-title {
+  text-align: center;
+}
+
+.skills__content {
+  padding: 64px 0;
 }/*# sourceMappingURL=main.css.map */
