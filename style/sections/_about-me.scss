@@ -10,7 +10,12 @@
     max-width: 1036px;
     margin: 0 auto;
     padding: 64px 0;
-
+    align-items: center;
+    
+    @media (max-width: 768px) {
+        flex-direction: column;
+        gap: 64px;
+    }
 }
 .context-icon {
     width: 100px;

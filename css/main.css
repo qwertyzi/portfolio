@@ -477,7 +477,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 @media (max-width: 768px) {
   .welcome__content {
-    padding: 140px 0px;
+    padding: 140px 0px 70px;
   }
 }
 
@@ -604,6 +604,13 @@ h1, h2, h3, h4, h5, h6 {
   max-width: 1036px;
   margin: 0 auto;
   padding: 64px 0;
+  align-items: center;
+}
+@media (max-width: 768px) {
+  .about-me__content {
+    flex-direction: column;
+    gap: 64px;
+  }
 }
 
 .context-icon {
