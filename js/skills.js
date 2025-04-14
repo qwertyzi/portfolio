@@ -36,7 +36,7 @@ const createListCard = () => {
         const icon = document.createElement("div");
         const sprite = 
         `
-        <svg class="social-icon" viewBox="0 0 24 24" width="114" height="129">
+        <svg class="skill-icon">
             <use href="/img/sprite.svg#${element.idSprite}"></use>
         </svg>
         `;
