@@ -12,6 +12,7 @@
     display: flex;
     gap: 16px;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
 .list-skills__item {
@@ -19,6 +20,10 @@
         .card-skill__icon {
             width: 114px;
             height: 129px;
+            @media (max-width: 450px) {
+                width: 29px;
+                height: 32px;
+            }
         }
     }
     &:nth-child(3),
@@ -27,6 +32,10 @@
         .card-skill__icon {
             width: 114px;
             height: 129px;
+            @media (max-width: 450px) {
+                width: 32px;
+                height: 32px;
+            }
         }
     }
 }
@@ -40,34 +49,43 @@
     align-items: center;
     gap: 16px;
     border-radius: 10px;
+
+    @media (max-width: 450px) {
+        flex-direction: row;
+        width: 285px;
+        height: 60px;
+        justify-content: start;
+        padding-left: 20px;
+    }
 }
 
+@media (hover:hover) {
+    
 .card-skill:hover{
-    cursor: pointer;
-    .skill-icon--html {
-        fill: #FC490B;
-        filter: drop-shadow(0 0 3px #FC490B);
-    }
-    .skill-icon--js {
-        fill: #FFDF00;
-        filter: drop-shadow(0 0 3px #FFDF00);
-    }
-    .skill-icon--css {
-        fill: #2196F4;
-        filter: drop-shadow(0 0 3px #2196F4);
-    }
-    .skill-icon--git {
-        fill: #F25234;
-        filter: drop-shadow(0 0 3px #F25234);
-    }
-    .skill-icon--scss {
-        fill: #CA669B;
-        filter: drop-shadow(0 0 3px #CA669B);
-    }
+        cursor: pointer;
+        .skill-icon--html {
+            fill: #FC490B;
+            filter: drop-shadow(0 0 3px #FC490B);
+        }
+        .skill-icon--js {
+            fill: #FFDF00;
+            filter: drop-shadow(0 0 3px #FFDF00);
+        }
+        .skill-icon--css {
+            fill: #2196F4;
+            filter: drop-shadow(0 0 3px #2196F4);
+        }
+        .skill-icon--git {
+            fill: #F25234;
+            filter: drop-shadow(0 0 3px #F25234);
+        }
+        .skill-icon--scss {
+            fill: #CA669B;
+            filter: drop-shadow(0 0 3px #CA669B);
+        }
 }
-
+}
 .card-skill__icon {
-
 }
 .skill-icon {
     width: 100%;
@@ -80,4 +98,7 @@
     color: aliceblue;
     font-family: 'Arial Narrow', Arial, sans-serif;
     font-weight: 400;
+    @media (max-width: 450px) {
+        font-size: 24px;
+    }
 }
