@@ -42,7 +42,7 @@ const createListCard = () => {
         icon.classList.add("card-skill__icon");
         const sprite = 
         `
-        <svg class="skill-icon">
+        <svg class="skill-icon skill-icon--${element.idSprite}">
             <use href="/img/sprite.svg#${element.idSprite}"></use>
         </svg>
         `;
