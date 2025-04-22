@@ -37,6 +37,12 @@ const createListCard = () => {
         
         const card = document.createElement("div");
         card.classList.add("card-skill");
+        
+        const cardFront = document.createElement("div");
+        cardFront.classList.add("card-skill__front");
+
+        const cardBack = document.createElement("div");
+        cardBack.classList.add("card-skill__back");
 
         const icon = document.createElement("div");
         icon.classList.add("card-skill__icon");
@@ -52,9 +58,11 @@ const createListCard = () => {
         title.classList.add("card-skill__title")
 
         listItem.append(card);
-        card.append(icon);
+        card.append(cardFront);
+        cardFront.append(icon, title)
         icon.innerHTML = sprite;
-        card.append(title);
+        card.append(cardBack);
+
 
         listElement.append(listItem);
     });

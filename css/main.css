@@ -673,6 +673,10 @@ h1, h2, h3, h4, h5, h6 {
   flex-wrap: wrap;
 }
 
+.list-skills__item {
+  width: 200px;
+  height: 300px;
+}
 .list-skills__item:first-child .card-skill__icon, .list-skills__item:nth-child(2) .card-skill__icon {
   width: 114px;
   height: 129px;
@@ -695,24 +699,57 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .card-skill {
-  width: 200px;
-  height: 300px;
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.card-skill__front, .card-skill__back {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  backface-visibility: hidden;
+  position: absolute;
+  transition: transform 1s;
+}
+.card-skill__front {
   background-color: #1f1e1b;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 16px;
+  transform: perspective(600px) rotateY(0deg);
   border-radius: 10px;
 }
 @media (max-width: 450px) {
-  .card-skill {
+  .card-skill__front {
     flex-direction: row;
     width: 285px;
     height: 60px;
     justify-content: start;
     padding-left: 20px;
   }
+}
+.card-skill__back {
+  color: rgb(255, 255, 255);
+  background-color: rgb(34, 85, 179);
+  transform: perspective(600px) rotateY(180deg);
+}
+.card-skill.active {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotateY(0deg);
+  max-width: 500px;
+  width: 100%;
+  height: 400px;
+  z-index: 3;
+}
+.card-skill.active .card-skill__front {
+  transform: perspective(600px) rotateY(-180deg);
+}
+.card-skill.active .card-skill__back {
+  transform: perspective(600px) rotateY(0deg);
 }
 
 @media (hover: hover) {
