@@ -735,6 +735,10 @@ h1, h2, h3, h4, h5, h6 {
   background-color: rgb(34, 85, 179);
   transform: perspective(600px) rotateY(180deg);
 }
+.card-skill__close {
+  width: 40px;
+  height: 40px;
+}
 .card-skill.active {
   position: fixed;
   top: 50%;

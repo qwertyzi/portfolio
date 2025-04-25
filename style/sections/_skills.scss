@@ -82,6 +82,11 @@
         transform: perspective(600px) rotateY(180deg);
     }
 
+    &__close {
+        width: 40px;
+        height: 40px;
+    }
+
     &.active {
         position: fixed;
         top: 50%;

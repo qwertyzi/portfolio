@@ -2,27 +2,27 @@ const cardList = [
     {
         tittle: "HTML5",
         idSprite: "html",
-        description: "",
+        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem qui quae blanditiis? Quis, saepe ex, accusamus quasi aliquid vero aperiam consequatur sunt numquam repudiandae similique labore, accusantium vitae nihil culpa!",
     },
     {
         tittle: "CSS3",
         idSprite: "css",
-        description: "",
+        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem qui quae blanditiis? Quis, saepe ex, accusamus quasi aliquid vero aperiam consequatur sunt numquam repudiandae similique labore, accusantium vitae nihil culpa!",
     },
     {
         tittle: "JavaScript",
         idSprite: "js",
-        description: "",
+        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem qui quae blanditiis? Quis, saepe ex, accusamus quasi aliquid vero aperiam consequatur sunt numquam repudiandae similique labore, accusantium vitae nihil culpa!",
     },
     {
         tittle: "SCSS",
         idSprite: "scss",
-        description: "",
+        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem qui quae blanditiis? Quis, saepe ex, accusamus quasi aliquid vero aperiam consequatur sunt numquam repudiandae similique labore, accusantium vitae nihil culpa!",
     },
     {
         tittle: "Git",
         idSprite: "git",
-        description: "",
+        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem qui quae blanditiis? Quis, saepe ex, accusamus quasi aliquid vero aperiam consequatur sunt numquam repudiandae similique labore, accusantium vitae nihil culpa!",
     },
 ]
 
@@ -37,6 +37,8 @@ const createListCard = () => {
         
         const card = document.createElement("div");
         card.classList.add("card-skill");
+
+        card.setAttribute("data-card", "");
         
         const cardFront = document.createElement("div");
         cardFront.classList.add("card-skill__front");
@@ -56,17 +58,44 @@ const createListCard = () => {
         const title = document.createElement("h6");
         title.innerText = element.tittle;
         title.classList.add("card-skill__title")
+        
+        const description = document.createElement("p");
+        description.innerText = element.description;
+        description.classList.add("card-skill__description");
+
+        const close = document.createElement("button");
+        close.classList.add("card-skill__close");
+        close.setAttribute("data-close", "");
 
         listItem.append(card);
         card.append(cardFront);
         cardFront.append(icon, title)
         icon.innerHTML = sprite;
         card.append(cardBack);
+        cardBack.append(description);
 
+        cardBack.append(close)
 
         listElement.append(listItem);
     });
     content.append(listElement);
+
+    listElement.addEventListener("click", event => animationCard(event));
+}
+
+const animationCard = (event) => {
+    const isCard = event.target.closest("[data-card]");
+    const isClose = event.target.closest("[data-close]")
+    
+    if (isClose) {
+        const card = isClose.closest("[data-card]");
+        card.classList.remove("active");
+        return
+    }
+    
+    if (isCard) {
+        isCard.classList.add("active");
+    }
 }
 
 createListCard()
